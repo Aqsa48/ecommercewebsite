@@ -204,7 +204,7 @@ app.prepare().then(() => {
         user.brandname = req.body.brandname;
         user.producttitle = req.body.producttitle;
         user.productprice = req.body.productprice;
-        user.productimage = req.file.path;
+        user.productimage = result.url;
 
         user.save((err, user) => {
           if (err) {
